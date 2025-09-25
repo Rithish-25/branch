@@ -1,10 +1,18 @@
+// src/App.js
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Name from './components/name';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Branching Example</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<h2>Welcome to Branching Example</h2>} />
+          <Route path="/name" element={<Name />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
